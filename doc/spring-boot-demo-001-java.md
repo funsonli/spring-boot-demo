@@ -15,14 +15,14 @@ pom.xml 说明
 
 目前最新的为Java SE 13，本系列我们下载常用的Java SE 8，下载后按照指示一步步安装。
 
-!(images/spring-boot-demo-001-java-01.png?raw=true)
+![图片](images/spring-boot-demo-001-java-01.png?raw=true)
 
 
 ### 2.配置环境变量
 
 我的电脑点击右键，然后选择属性
 
-!(images/spring-boot-demo-001-java-020.png?raw=true)
+![图片](images/spring-boot-demo-001-java-020.png?raw=true)
 
 
 - 新建JAVA_HOME环境变量配置为JDK安装目录
@@ -31,11 +31,11 @@ pom.xml 说明
 
 - 新建CLASSPATH配置为.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
 
-!(images/spring-boot-demo-001-java-03.png?raw=true)
+![图片](images/spring-boot-demo-001-java-03.png?raw=true)
 
 - 在PATH环境变量中追加JAVA路径
 
-!(images/spring-boot-demo-001-java-04.png?raw=true)
+![图片](images/spring-boot-demo-001-java-04.png?raw=true)
 
 ### 测试JAVA安装
 
