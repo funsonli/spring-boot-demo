@@ -1,0 +1,8 @@
+demo:
+  student:
+    name: funson
+    age: 30
+
+spring:
+  profiles:
+    active: prod

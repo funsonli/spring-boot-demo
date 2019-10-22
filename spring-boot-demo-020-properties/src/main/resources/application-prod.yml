@@ -1,0 +1,7 @@
+demo:
+  book:
+    name: spring boot demo prod
+    price: 59
+    authors:
+      - funson
+      - fuson1
