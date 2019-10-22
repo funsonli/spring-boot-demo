@@ -75,7 +75,7 @@ public class BookProperties {
 ```
 - @Data 为lombok插件，让我们省略很多get set代码
 - @ConfigurationProperties 表示为配置项，prefix表示前缀
-- @Componet表示该配置为bean，在controller里面可以使用@Autowired自动生成
+- @Component表示该配置为bean，在controller里面可以使用@Autowired自动生成
 
 BookController.java
 ``` 

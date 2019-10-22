@@ -1,6 +1,6 @@
-# Spring Boot入门样例-020-JDBC读取数据库中数据
+# Spring Boot入门样例-020-JPA自动读取数据库中数据
 
-> 数据存储在数据库中，需要展示给用户。本demo演示如何读取mysql数据库中数据，并展示给用户
+> JDBC方式写sql语句读取数据库中数据，每个表都要写而且大同小异。本demo演示如何使用jpa hibernate自动读取数据库中数据
 
 ### 前言
 
@@ -17,10 +17,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -43,6 +42,15 @@ spring:
     url: jdbc:mysql://localhost:3306/springbootdemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&useAffectedRows=true
     username: root
     password: root
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
 ```
 
 ### 代码解析
@@ -56,37 +64,27 @@ spring:
 - util为工具类目录，加入分布式id雪花算法
 
 
-Student.java 每个字段对应表格一个字段
+Student.java 每个字段对应表格一个字段，需要指定@Entity和表格@Table和@Id
 ``` 
 @Data
-@Component
+@Entity
+@Table(name = "student")
 public class Student {
     private static final long serialVersionUID = 1L;
+
+    @Id
     private String id = String.valueOf(SnowFlake.getInstance().nextId());
+
     private String name;
+
     private Integer age;
 }
 ```
 
-StudentDao.java 操作表格的对象方法
+StudentDao.java 操作表格的对象方法，不用写一行sql定义了
 ``` 
 @Repository
-public class StudentDao {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    public List<Student> list() {
-        List<Student> list = jdbcTemplate.query("select * from student", new Object[]{}, new BeanPropertyRowMapper(Student.class));
-        if (list != null && list.size() > 0) {
-            return list;
-        } else {
-            return null;
-        }
-    }
-
-    public int save(Student student) {
-        return jdbcTemplate.update("insert into student(id, name, age) values(?, ?, ?)", student.getId(), student.getName(), student.getAge());
-    }
+public interface StudentDao extends JpaRepository<Student, String>, JpaSpecificationExecutor<Student> {
 
 }
 ```
@@ -154,7 +152,7 @@ public class StudentController {
 浏览器访问 http://localhost:8080/student/add/zhonghua/28
 
 浏览器访问 http://localhost:8080/student/
-[Student(id=381159203135426560, name=funson,funson, age=30), Student(id=aa, name=funson, age=2)]
+[Student(id=381159203135426560, name=funson, age=30), Student(id=381159203135926560, name=zhonghua, age=26)]
 ```
 
 ### 参考
