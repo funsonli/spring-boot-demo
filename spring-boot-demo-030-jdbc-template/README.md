@@ -1,6 +1,6 @@
 # Spring Boot入门样例-020-JDBC读取数据库中数据
 
-> 网站总是要给前端展示信息，先把配置文件中的数据展示到前端。本demo演示如何读取Spring Boot系统配置，并支持开发环境和正式环境配置切换
+> 数据存储在数据库中，需要展示给用户。本demo演示如何读取mysql数据库中数据，并展示给用户
 
 ### 前言
 
@@ -11,7 +11,7 @@
 - Spring Boot入门样例-005-如何运行(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
 ### pox.xml
-其中spring-boot-starter-web和lombok是必须的，具体参见该项目的pox.xml
+必要的依赖如下，具体参见该项目的pox.xml
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -34,11 +34,8 @@
 ```
 
 ### 配置文件
-默认为application.properties，但是因为配置多会比较臃肿，所以我们后续采用yml方式，只需要将该文件修改为application.yml即可
 
-active: prod 表示使用application-prod.yml中的配置, 其中student读取application.yml
-
-application.yml配置内容，
+application.yml配置内容
 ```
 spring:
   datasource:
@@ -152,14 +149,14 @@ public class StudentController {
         return studentService.index().toString();
     }
 
-    @PostMapping("/save")
-    public String save(@ModelAttribute Student modelAttribute, BindingResult result) {
-        if (result.hasErrors()) {
-            return "binding error";
-        }
+    @GetMapping("/add/{name}/{age}")
+    public String add(HttpServletRequest request, @PathVariable String name, @PathVariable Integer age) {
+        Student model = new Student();
+        model.setName(name);
+        model.setAge(age);
 
-        int res = studentService.save(modelAttribute);
-        return String.valueOf(res);
+        model = studentService.save(model);
+        return model.toString();
     }
 }
 ```
@@ -169,7 +166,8 @@ public class StudentController {
 点击[运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
 ```
-使用POSTMAN使用POST方法访问 http://localhost:8080/student/save 保存数据 
+浏览器访问 http://localhost:8080/student/add/funson/30
+浏览器访问 http://localhost:8080/student/add/zhonghua/28
 
 浏览器访问 http://localhost:8080/student/
 [Student(id=381159203135426560, name=funson,funson, age=30), Student(id=aa, name=funson, age=2)]

@@ -30,13 +30,13 @@ public class StudentController {
         return studentService.index().toString();
     }
 
-    @PostMapping("/save")
-    public String save(@ModelAttribute Student modelAttribute, BindingResult result) {
-        if (result.hasErrors()) {
-            return "binding error";
-        }
+    @GetMapping("/add/{name}/{age}")
+    public String add(HttpServletRequest request, @PathVariable String name, @PathVariable Integer age) {
+        Student model = new Student();
+        model.setName(name);
+        model.setAge(age);
 
-        int res = studentService.save(modelAttribute);
+        int res = studentService.save(model);
         return String.valueOf(res);
     }
 }
