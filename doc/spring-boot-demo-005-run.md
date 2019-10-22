@@ -1,6 +1,6 @@
-# Spring Boot入门样例-001-Java安装
+# Spring Boot入门样例-005-如何运行
 
-> 本文说明Java在windows下的安装和配置
+> 本文说明本项目如何下载和运行
 
 ### 前言
 
@@ -54,6 +54,7 @@ idea右下角会弹出如下框，点击右侧的Enable Auto-Import，自动加�
 ### 参考
 - 源代码地址 https://github.com/funsonli/spring-boot-demo
 
-### 附
 
+### 附
 如果您喜欢本Spring Boot入门样例和样例代码，请记得给我们点赞Star
+

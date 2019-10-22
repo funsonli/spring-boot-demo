@@ -1,6 +1,6 @@
-# Spring Boot入门样例-001-Java安装
+# Spring Boot入门样例-003-idea 安装配置和插件
 
-> 本文说明Java在windows下的安装和配置
+> 本文说明Java编辑器Idea的安装和本项目所用到的插件
 
 ### 前言
 
@@ -9,8 +9,6 @@
 - Spring Boot入门样例-001-Java安装(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-001-java.md)
 - Spring Boot入门样例-003-idea 安装配置和插件(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-003-idea.md)
 - Spring Boot入门样例-005-如何运行(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
-- Spring Boot入门样例-007-pom.xml说明(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-007-pom.md)
-
 
 ### 下载安装
 下载地址：https://www.jetbrains.com/idea/download/
@@ -36,6 +34,7 @@
 ### 参考
 - 源代码地址 https://github.com/funsonli/spring-boot-demo
 
-### 附
 
+### 附
 如果您喜欢本Spring Boot入门样例和样例代码，请记得给我们点赞Star
+
