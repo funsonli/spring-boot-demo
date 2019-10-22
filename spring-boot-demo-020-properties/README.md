@@ -1,6 +1,6 @@
 # Spring Boot入门样例-020-properties配置
 
-> 本demo演示如何读取Spring Boot系统配置，并支持开发环境和正式环境配置切换
+> 网站总是要给前端展示信息，先把配置文件中的数据展示到前端。本demo演示如何读取Spring Boot系统配置，并支持开发环境和正式环境配置切换
 
 ### 前言
 
@@ -56,11 +56,10 @@ application-dev.yml配置内容
    book:
      name: spring boot demo prod
      price: 69
-     authors:
+     authors: # 配置项支持数组
        - funson
        - fuson1
 ```
-# 配置项支持
 
 BookProperties.java解析配置项
 
