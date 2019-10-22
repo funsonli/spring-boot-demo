@@ -1,4 +1,4 @@
-# spring-boot-demo-010-hello-world
+# Spring Boot入门样例-010-hello-world
 
 > 本demo用spring boot在网页上输出一个简单的hello world
 
