@@ -1,6 +1,6 @@
-# Spring Boot入门样例-020-JDBC读取数据库中数据
+# Spring Boot入门样例-020-JPA自动读取数据库中数据
 
-> 数据存储在数据库中，需要展示给用户。本demo演示如何读取mysql数据库中数据，并展示给用户
+> jpa hibernate自动读取数据库对于单表操作比较方便，对于复杂的查询语句，使用jpa就比较麻烦。本demo演示如何使用mybatis半自动化操作数据库。
 
 ### 前言
 
@@ -17,10 +17,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -43,6 +42,11 @@ spring:
     url: jdbc:mysql://localhost:3306/springbootdemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&useAffectedRows=true
     username: root
     password: root
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 ```
 
 ### 代码解析
@@ -50,51 +54,62 @@ spring:
 
 - controller目录为控制器文件
 - entity目录为实体目录，对应表格中的字段
-- dao目录数据存取对象
+- mapper目录数据存取对象
 - service为服务接口目录
 - service/impl为服务接口具体实现目录
 - util为工具类目录，加入分布式id雪花算法
+- resources/mapper/为mapper对应xml文件路径，在yml配置文件中有定义
 
 
-Student.java 每个字段对应表格一个字段
+Student.java 每个字段对应表格一个字段，需要指定@Entity和表格@Table和@Id
 ``` 
 @Data
-@Component
+@Entity
+@Table(name = "student")
 public class Student {
     private static final long serialVersionUID = 1L;
+
+    @Id
     private String id = String.valueOf(SnowFlake.getInstance().nextId());
+
     private String name;
+
     private Integer age;
 }
 ```
 
-StudentDao.java 操作表格的对象方法
+StudentMapper.java 操作表格的对象方法，简单的可以用@Select，复杂的可以对应到StudentMapper.xml文件
 ``` 
-@Repository
-public class StudentDao {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+@Mapper
+public interface StudentMapper {
+    @Select("SELECT * FROM student")
+    List<Student> list();
 
-    public List<Student> list() {
-        List<Student> list = jdbcTemplate.query("select * from student", new Object[]{}, new BeanPropertyRowMapper(Student.class));
-        if (list != null && list.size() > 0) {
-            return list;
-        } else {
-            return null;
-        }
-    }
-
-    public int save(Student student) {
-        return jdbcTemplate.update("insert into student(id, name, age) values(?, ?, ?)", student.getId(), student.getName(), student.getAge());
-    }
-
+    int save(@Param("student") Student student);
 }
+
+```
+
+resources/mapper/StudentMapper.xml 文件对应Mapper文件，通过id关联
+``` 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funsonli.springbootdemo050mybatis.mapperStudentMapper">
+    <insert id="save">
+        INSERT INTO `student` (`id`,
+                                `name`,
+                                `age`)
+        VALUES (#{student.name},
+                #{student.password},
+                #{student.age})
+    </insert>
+</mapper>
 ```
 
 StudentService.java 提供给controller的服务接口
 ``` 
 public interface StudentService {
-    List<Student> index();
+    List<Student> list();
     Integer save(Student student);
 }
 ```
@@ -154,7 +169,7 @@ public class StudentController {
 浏览器访问 http://localhost:8080/student/add/zhonghua/28
 
 浏览器访问 http://localhost:8080/student/
-[Student(id=381159203135426560, name=funson,funson, age=30), Student(id=aa, name=funson, age=2)]
+[Student(id=381159203135426560, name=funson, age=30), Student(id=381159203135926560, name=zhonghua, age=26)]
 ```
 
 ### 参考
