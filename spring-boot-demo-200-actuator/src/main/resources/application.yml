@@ -1,0 +1,16 @@
+management:
+  health:
+    status:
+      http-mapping:
+        DOWN: 200
+        OUT_OF_SERVICE: 200
+        FATAL: 200
+        UNKNOWN: 200
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /bootan/actuator/
+      exposure:
+        include: '*'
