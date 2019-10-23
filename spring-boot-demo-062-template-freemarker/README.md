@@ -1,6 +1,6 @@
-# Spring Boot入门样例-061-beetl模板引擎
+# Spring Boot入门样例-062-freemarker模板引擎
 
-> 已经可以将数据库中数据读取出来，该在前端显示漂亮的界面。本demo演示如何使用beetl模板引擎渲染出一个简单的登录界面。
+> 已经可以将数据库中数据读取出来，该在前端显示漂亮的界面。本demo演示如何使用freemarker模板引擎渲染出一个简单的登录界面。
 
 ### 前言
 
@@ -15,12 +15,11 @@
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.ibeetl</groupId>
-            <artifactId>beetl-framework-starter</artifactId>
-            <version>1.1.63.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -34,7 +33,12 @@
 
 application.yml配置内容
 ```
-无需配置
+spring:
+  freemarker:
+    suffix: .ftl                                 # 设置模板后缀名
+    content-type: text/html                      # 设置文档类型
+    charset: UTF-8                               # 设置页面编码格式
+    cache: false                                 # 设置页面缓存
 ```
 
 ### 代码解析
@@ -68,12 +72,12 @@ public class SiteController {
         }
         request.setAttribute("user", user);
 
-        return "site/index.btl";
+        return "site/index";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "site/login.btl";
+        return "site/login";
     }
 
     @PostMapping("/login")
@@ -89,8 +93,8 @@ public class SiteController {
 ```
 
 1. index方法先判断是否登录，否则跳转login
-2. get的login方法显示resources/templates/site/login.btl文件，该文件会引入resources/templates/common/head.html，以及使用resources/static中的css和图片文件
-3. 登录后显示resources/templates/site/index.btl中内容
+2. get的login方法显示resources/templates/site/login.ftl文件，该文件会引入resources/templates/common/head.html，以及使用resources/static中的css和图片文件
+3. 登录后显示resources/templates/site/index.ftl中内容
 
 ### 运行
 

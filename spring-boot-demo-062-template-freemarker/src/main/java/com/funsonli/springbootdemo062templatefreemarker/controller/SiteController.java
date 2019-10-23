@@ -1,6 +1,6 @@
-package com.funsonli.springbootdemo061templatebeetl.controller;
+package com.funsonli.springbootdemo062templatefreemarker.controller;
 
-import com.funsonli.springbootdemo061templatebeetl.entity.User;
+import com.funsonli.springbootdemo062templatefreemarker.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,12 +28,12 @@ public class SiteController {
         }
         request.setAttribute("user", user);
 
-        return "site/index.btl";
+        return "site/index";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "site/login.btl";
+        return "site/login";
     }
 
     @PostMapping("/login")

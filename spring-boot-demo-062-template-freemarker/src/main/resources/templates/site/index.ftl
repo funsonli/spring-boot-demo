@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<#include "../common/head.html">
+<body>
+<div class="header">
+	<a href="/"><img src="/images/logo.png"></a>欢迎使用Spring Boot入门样例
+</div>
+<div class="content">
+	欢迎，${user.name}
+</div>
+</body>
+</html>
