@@ -1,0 +1,17 @@
+spring:
+  # Redis
+  redis:
+    password:
+    # 数据库索引 默认0
+    database: 0
+    # 超时时间 Duration类型 3秒
+    timeout: 3S
+    cluster:
+      nodes:
+        - 127.0.0.1:6379
+        - 127.0.0.1:6380
+        - 127.0.0.1:6381
+    sentinel:
+      master: mymaster
+      nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
+
