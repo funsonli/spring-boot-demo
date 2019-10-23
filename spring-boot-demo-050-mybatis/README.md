@@ -1,4 +1,4 @@
-# Spring Boot入门样例-020-JPA自动读取数据库中数据
+# Spring Boot入门样例-050-Mybatis半自动化读取数据库
 
 > jpa hibernate自动读取数据库对于单表操作比较方便，对于复杂的查询语句，使用jpa就比较麻烦。本demo演示如何使用mybatis半自动化操作数据库。
 

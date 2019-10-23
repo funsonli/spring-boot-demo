@@ -1,4 +1,4 @@
-# Spring Boot入门样例-020-JPA自动读取数据库中数据
+# Spring Boot入门样例-040-JPA自动读取数据库中数据
 
 > JDBC方式写sql语句读取数据库中数据，每个表都要写而且大同小异。本demo演示如何使用jpa hibernate自动读取数据库中数据
 

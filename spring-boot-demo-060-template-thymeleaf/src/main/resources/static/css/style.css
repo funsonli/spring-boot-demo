@@ -1,0 +1,12 @@
+.header {
+    margin: 15px auto;
+    width: 1280px;
+}
+.header img {
+    width: 40px;
+    height: 40px;
+}
+.content {
+    margin: 10px auto;
+    width: 1280px;
+}
