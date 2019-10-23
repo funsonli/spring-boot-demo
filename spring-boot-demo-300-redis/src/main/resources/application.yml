@@ -1,0 +1,12 @@
+spring:
+  # Redis
+  redis:
+    # 单机版
+    host: 127.0.0.1
+    port: 6379
+    password:
+    # 数据库索引 默认0
+    database: 0
+    # 超时时间 Duration类型 3秒
+    timeout: 3S
+
