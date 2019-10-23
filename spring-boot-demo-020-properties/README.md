@@ -29,7 +29,7 @@
 
 active: prod 表示使用application-prod.yml中的配置, 其中student读取application.yml
 
-application.yml配置内容，
+resources/application.yml配置内容，
 ```
 demo:
   student:

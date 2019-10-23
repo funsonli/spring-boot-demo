@@ -31,7 +31,7 @@
 
 ### 配置文件
 
-application.yml配置内容
+resources/application.yml配置内容
 ```
 spring:
   freemarker:
