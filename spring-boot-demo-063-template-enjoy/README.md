@@ -1,6 +1,6 @@
-# Spring Boot入门样例-061-beetl模板引擎
+# Spring Boot入门样例-063-enjoy模板引擎
 
-> 已经可以将数据库中数据读取出来，该在前端显示漂亮的界面。本demo演示如何使用beetl模板引擎渲染出一个简单的登录界面。
+> 已经可以将数据库中数据读取出来，该在前端显示漂亮的界面。本demo演示如何使用enjoy模板引擎渲染出一个简单的登录界面。
 
 ### 前言
 
@@ -18,9 +18,9 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.ibeetl</groupId>
-            <artifactId>beetl-framework-starter</artifactId>
-            <version>1.1.63.RELEASE</version>
+            <groupId>com.jfinal</groupId>
+            <artifactId>enjoy</artifactId>
+            <version>3.5</version>
         </dependency>
 
         <dependency>
@@ -55,9 +55,29 @@ public class User {
 }
 ```
 
+EnjoyConfig.java 如下
+```java
+@Configuration
+public class EnjoyConfig {
+	@Bean
+	public JFinalViewResolver jFinalViewResolver() {
+		JFinalViewResolver jfr = new JFinalViewResolver();
+		jfr.setDevMode(false);
+		jfr.setSourceFactory(new ClassPathSourceFactory());
+		//设置模板根路径
+		jfr.setPrefix("/templates/");
+		//设置模板后缀
+		jfr.setSuffix(".html");
+		jfr.setContentType("text/html;charset=UTF-8");
+		jfr.setOrder(0);
+
+		return jfr;
+	}
+}
+```
+
 SiteController.java 如下
 ``` 
-@Controller
 public class SiteController {
 
     @GetMapping({"", "/", "index"})
@@ -68,12 +88,12 @@ public class SiteController {
         }
         request.setAttribute("user", user);
 
-        return "site/index.btl";
+        return "site/index";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "site/login.btl";
+        return "site/login";
     }
 
     @PostMapping("/login")
@@ -85,12 +105,11 @@ public class SiteController {
         return "redirect:/";
     }
 }
-
 ```
 
 1. index方法先判断是否登录，否则跳转login
-2. get的login方法显示resources/templates/site/login.btl文件，该文件会引入resources/templates/common/head.html，以及使用resources/static中的css和图片文件
-3. 登录后显示resources/templates/site/index.btl中内容
+2. get的login方法显示resources/templates/site/login.html文件，该文件会引入resources/templates/common/head.html，以及使用resources/static中的css和图片文件
+3. 登录后显示resources/templates/site/index.html中内容
 
 ### 运行
 
