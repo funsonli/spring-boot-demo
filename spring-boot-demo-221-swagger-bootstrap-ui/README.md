@@ -1,6 +1,6 @@
-# Spring Boot入门样例-220-swagger2自动生成接口文档
+# Spring Boot入门样例-221-swagger2-bootstrap-ui自动生成接口文档美化版
 
-> 开发文档从函数上直接生成，避免文档维护不一致。本demo演示如何使用swagger2自动生成接口文档。
+> swagger2官方的文档显示略丑。本demo演示如何使用swagger2 bootstrap界面美化版。
 
 ### 前言
 
@@ -11,6 +11,9 @@
 - Spring Boot入门样例-005-如何运行(https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
 ### pox.xml
+
+> 和Spring Boot入门样例-220-swagger2自动生成接口文档除了pom.xml不一样之外，其他都一样，访问地址 
+
 必要的依赖如下，具体参见该项目的pox.xml
 ```
         <dependency>
@@ -19,13 +22,13 @@
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
+            <artifactId>springfox-swagger2</artifactId>
             <version>2.9.2</version>
         </dependency>
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
         </dependency>
 
         <dependency>
@@ -164,10 +167,10 @@ public class StudentController {
 点击[运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
 ```
-浏览器访问 http://localhost:8080/swagger-ui.html
+浏览器访问 http://localhost:8080/doc.html
 
 ```
-![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-220-swagger2-01.png?raw=true)
+![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-221-swagger2-01.png?raw=true)
 
 ### 参考
 - Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo

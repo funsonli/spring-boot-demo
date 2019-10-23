@@ -1,0 +1,10 @@
+# Swagger界面内容配置
+swagger:
+  title: Bootan API接口文档
+  description: Bootan Api Documentation
+  version: 1.0.0
+  termsOfServiceUrl: https://github.com/funsonli/spring-boot-demo
+  contact:
+    name: Funsonli
+    url: https://github.com/funsonli/spring-boot-demo
+    email: funsonli@163.com
