@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  boot:
+    admin:
+      # 修改上下文路径，表示Admin服务器
+      context-path: /bootan/admin
+      # 表示客户端发送状态到所在的服务器
+      client:
+        url: http://127.0.0.1:${server.port}/bootan/admin
+
+management:
+  health:
+    status:
+      http-mapping:
+        DOWN: 200
+        OUT_OF_SERVICE: 200
+        FATAL: 200
+        UNKNOWN: 200
+  endpoint:
+    health:
+      # 健康情况always表示可显示硬盘使用情况和线程情况
+      show-details: always
+  endpoints:
+    web:
+      # 自定义访问地址
+      base-path: /bootan/actuator/
+      exposure:
+        # 设置哪些可以访问，设置*表示所有，默认为["health","info"]
+        include: '*'
+
