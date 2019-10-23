@@ -7,7 +7,6 @@
 
 本项目作为Spring Boot入门样例，从浅到深用样例学习Spring Boot，并集成Spring Boot常用功能，包括logback日志，Aop日志
 
-> 本demo用spring boot在网页上输出一个简单的hello world
 
 
 项目中间的三位数字的描述如下：
@@ -43,5 +42,5 @@ Copyright (c)
 
 
 ### 附
-如果您喜欢本Spring Boot入门样例和样例代码，请记得给我们点赞Star
+如果您喜欢本Spring Boot入门样例和样例代码，请[点赞Star](https://github.com/funsonli/spring-boot-demo)
 
