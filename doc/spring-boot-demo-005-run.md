@@ -23,7 +23,7 @@
 
 点击【File】【Project Structure】，设置Project SDK为1.8
 
-![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-005-run-030.png?raw=true)
+![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-005-run-05.png?raw=true)
 
 
 ### 3.加载项目依赖
