@@ -11,8 +11,8 @@
 - [Spring Boot入门样例-005-如何运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
 相关功能
-- 如果想查看Ehcache做缓存，请查看[Spring Boot入门样例-301-ehcache-cache整合Ehcache Caching缓存数据](https://github.com/funsonli/spring-boot-demo/tree/master/spring-boot-demo-120-ehcache-cache)
-- 如果想查看Guava做缓存，请查看[Spring Boot入门样例-301-guava-cache整合Guava Caching缓存数据](https://github.com/funsonli/spring-boot-demo/tree/master/spring-boot-demo-230-guava-cache)
+- 如果想查看Ehcache做缓存，请查看[Spring Boot入门样例-120-ehcache-cache整合Ehcache Caching缓存数据](https://github.com/funsonli/spring-boot-demo/tree/master/spring-boot-demo-120-ehcache-cache)
+- 如果想查看Guava做缓存，请查看[Spring Boot入门样例-230-guava-cache整合Guava Caching缓存数据](https://github.com/funsonli/spring-boot-demo/tree/master/spring-boot-demo-230-guava-cache)
 - 如果想查看Redis做缓存，请查看[Spring Boot入门样例-301-redis-cache使用Redis Caching缓存数据](https://github.com/funsonli/spring-boot-demo/tree/master/spring-boot-demo-301-redis-cache)
 
 ### pox.xml
