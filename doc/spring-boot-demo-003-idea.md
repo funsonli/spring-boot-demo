@@ -1,4 +1,4 @@
-# [Spring Boot入门样例-003-idea 安装配置和插件]
+# Spring Boot入门样例-003-idea 安装配置和插件
 
 > 本文说明Java编辑器Idea的安装和本项目所用到的插件
 

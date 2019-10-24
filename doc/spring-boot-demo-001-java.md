@@ -1,4 +1,4 @@
-# [Spring Boot入门样例-001-Java和Maven安装配置]
+# Spring Boot入门样例-001-Java和Maven安装配置
 
 > 本文说明Java和Maven在windows下的安装和配置
 
