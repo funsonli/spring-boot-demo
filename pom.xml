@@ -40,7 +40,6 @@
         <module>spring-boot-demo-230-guava-cache</module>
         <module>spring-boot-demo-231-guava-rate-limit</module>
         <module>spring-boot-demo-280-docker</module>
-<!--        <module>spring-boot-demo-280-docker-maven</module>-->
 
         <!-- 3xx 主要是Nosql-->
         <module>spring-boot-demo-300-redis</module>
