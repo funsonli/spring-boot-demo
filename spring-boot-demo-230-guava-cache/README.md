@@ -1,6 +1,6 @@
-# Spring Boot入门样例-301-ehcache-cache整合Ehcache Caching缓存数据
+# Spring Boot入门样例-301-guava-cache整合Guava Caching缓存数据
 
-> 每次都读取数据库非常慢，对于相同的查询，我们可以使用缓存。本demo演示如何使用ehcache和@CachePut 和 @Cacheable缓存数据。
+> 每次都读取数据库非常慢，对于相同的查询，我们可以使用缓存。本demo演示如何使用guava和@CachePut 和 @Cacheable缓存数据。
 
 ### 前言
 
@@ -17,7 +17,22 @@
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.3.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -28,25 +43,17 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 ```
 
 ### 配置文件
 
-resources/application.yml配置内容 ehcache.config指定ehcache的
+resources/application.yml配置内容
 ```
 spring:
-  cache:
-    type: ehcache
-    ehcache:
-      config: classpath:ehcache.xml
-
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/springbootdemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&useAffectedRows=true
@@ -64,58 +71,32 @@ spring:
 
 ```
 
-resources/ehcache.xml配置内容
-``` 
-<!-- ehcache配置 -->
-<ehcache
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-        updateCheck="false">
-    <!--缓存路径，用户目录下的ehcache目录-->
-    <diskStore path="user.home/ehcache"/>
-
-    <defaultCache
-            maxElementsInMemory="20000"
-            eternal="false"
-            timeToIdleSeconds="120"
-            timeToLiveSeconds="120"
-            overflowToDisk="true"
-            maxElementsOnDisk="10000000"
-            diskPersistent="false"
-            diskExpiryThreadIntervalSeconds="120"
-            diskSpoolBufferSizeMB="50"
-            memoryStoreEvictionPolicy="LRU"/>
-
-    <!--
-    缓存文件名：student，同样的可以配置多个缓存
-    maxElementsOnDisk：在磁盘上缓存的element的最大数目，默认值为0，表示不限制。
-    eternal：设定缓存的elements是否永远不过期。如果为true，则缓存的数据始终有效，如果为false那么还要根据timeToIdleSeconds，timeToLiveSeconds判断。
-    overflowToDisk： 如果内存中数据超过内存限制，是否要缓存到磁盘上。
-    diskPersistent：是否在磁盘上持久化。指重启jvm后，数据是否有效。默认为false。
-    timeToIdleSeconds：对象空闲时间，指对象在多长时间没有被访问就会失效。只对eternal为false的有效。默认值0，表示一直可以访问。
-    timeToLiveSeconds：对象存活时间，指对象从创建到失效所需要的时间。只对eternal为false的有效。默认值0，表示一直可以访问。
-    diskSpoolBufferSizeMB：DiskStore使用的磁盘大小，默认值30MB。每个cache使用各自的DiskStore。
-    diskExpiryThreadIntervalSeconds：对象检测线程运行时间间隔。标识对象状态的线程多长时间运行一次。
-    -->
-    <cache name="student"
-           maxElementsInMemory="20000"
-           eternal="true"
-           overflowToDisk="true"
-           diskPersistent="false"
-           timeToIdleSeconds="0"
-           timeToLiveSeconds="0"
-           diskSpoolBufferSizeMB="50"
-           diskExpiryThreadIntervalSeconds="120"/>
-
-</ehcache>
-```
-
 
 ### 代码解析
 
 其他代码解析参考 spring-boot-demo-040-jpa 模块。
 
-StudentServiceImpl.java 如下 @CachePut 和 @Cacheable都会将数据缓存到ehcache中
+GuavaConfig.java 如下
+```
+@Configuration
+public class GuavaConfig {
+
+    /**
+     * spring缓存配置，使用guava
+     * @author Funson
+     * @date 2019/10/24
+     * @return
+     */
+    @Bean
+    public CacheManager cacheManager(){
+        GuavaCacheManager cacheManager = new GuavaCacheManager();
+        // 设置过期时间为7200秒
+        cacheManager.setCacheBuilder(CacheBuilder.newBuilder().expireAfterWrite(7200, TimeUnit.SECONDS));
+        return cacheManager;
+    }
+}
+```
+StudentServiceImpl.java 如下 @CachePut 和 @Cacheable都会将数据缓存到guava中
 ``` 
 @Slf4j
 @Service
@@ -144,17 +125,18 @@ public class StudentServiceImpl implements StudentService {
 }
 ```
 
-SpringBootDemo120EhcacheCacheApplication.java  要加上@EnableCaching
+SpringBootDemo230GuavaCacheApplication.java  要加上@EnableCaching
 ```
 @SpringBootApplication
 @EnableCaching
-public class SpringBootDemo120EhcacheCacheApplication {
+public class SpringBootDemo230GuavaCacheApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemo120EhcacheCacheApplication.class, args);
+        SpringApplication.run(SpringBootDemo230GuavaCacheApplication.class, args);
     }
 
 }
+
 ```
 
 ### 运行
@@ -171,10 +153,9 @@ public class SpringBootDemo120EhcacheCacheApplication {
 Hibernate: select student0_.id as id1_0_0_, student0_.age as age2_0_0_, student0_.name as name3_0_0_ from student student0_ where student0_.id=?
 表示从数据库里查询
 
-可以查看到c:\users\funsonli\ehcache\student.data文件
 
 浏览器再次访问 http://localhost:8080/student/view/381159203135426560
-没有日志，表示从ehcache缓存中读取
+没有日志，表示从guava缓存中读取
 
 
 浏览器访问 http://localhost:8080/student/add/funsonli1/29

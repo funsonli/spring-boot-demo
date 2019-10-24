@@ -17,6 +17,35 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <modules>
+        <module>spring-boot-demo-010-hello-world</module>
+        <module>spring-boot-demo-020-properties</module>
+        <module>spring-boot-demo-030-jdbc-template</module>
+        <module>spring-boot-demo-040-jpa</module>
+        <module>spring-boot-demo-050-mybatis</module>
+        <module>spring-boot-demo-060-template-thymeleaf</module>
+        <module>spring-boot-demo-061-template-beetl</module>
+        <module>spring-boot-demo-062-template-freemarker</module>
+        <module>spring-boot-demo-063-template-enjoy</module>
+        <module>spring-boot-demo-110-log</module>
+        <module>spring-boot-demo-111-log-aop</module>
+        <module>spring-boot-demo-120-ehcache-cache</module>
+<!--        <module>spring-boot-demo-130-websocket</module>-->
+
+        <!-- 2xx 主要是第三方整合功能 -->
+        <module>spring-boot-demo-200-actuator</module>
+        <module>spring-boot-demo-210-admin</module>
+        <module>spring-boot-demo-220-swagger</module>
+        <module>spring-boot-demo-221-swagger-bootstrap-ui</module>
+        <module>spring-boot-demo-230-guava-cache</module>
+
+        <!-- 3xx 主要是Nosql-->
+        <module>spring-boot-demo-300-redis</module>
+        <module>spring-boot-demo-301-redis-cache</module>
+        <module>spring-boot-demo-305-redis-sentinel</module>
+        <module>spring-boot-demo-310-mongodb</module>
+
+    </modules>
 
     <dependencies>
         <dependency>

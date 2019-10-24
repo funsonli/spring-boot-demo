@@ -18,17 +18,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.io.Serializable;
 
 /**
- * <p>
  * redis配置
- * </p>
- *
- * @package: com.xkcoding.cache.redis.config
- * @description: redis配置
- * @author: yangkai.shen
- * @date: Created in 2018/11/15 16:41
- * @copyright: Copyright (c) 2018
- * @version: V1.0
- * @modified: yangkai.shen
+ * @author funsonli
  */
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
