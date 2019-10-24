@@ -38,6 +38,7 @@
         <module>spring-boot-demo-220-swagger</module>
         <module>spring-boot-demo-221-swagger-bootstrap-ui</module>
         <module>spring-boot-demo-230-guava-cache</module>
+        <module>spring-boot-demo-231-guava-rate-limit</module>
 
         <!-- 3xx 主要是Nosql-->
         <module>spring-boot-demo-300-redis</module>
