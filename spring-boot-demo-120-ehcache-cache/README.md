@@ -1,4 +1,4 @@
-# Spring Boot入门样例-301-ehcache-cache整合Ehcache Caching缓存数据
+# Spring Boot入门样例-120-ehcache-cache整合Ehcache Caching缓存数据
 
 > 每次都读取数据库非常慢，对于相同的查询，我们可以使用缓存。本demo演示如何使用ehcache和@CachePut 和 @Cacheable缓存数据。
 

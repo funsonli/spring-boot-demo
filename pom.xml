@@ -27,6 +27,8 @@
         <module>spring-boot-demo-061-template-beetl</module>
         <module>spring-boot-demo-062-template-freemarker</module>
         <module>spring-boot-demo-063-template-enjoy</module>
+        <module>spring-boot-demo-090-blog</module>
+
         <module>spring-boot-demo-110-log</module>
         <module>spring-boot-demo-111-log-aop</module>
         <module>spring-boot-demo-120-ehcache-cache</module>
