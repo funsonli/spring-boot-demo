@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div class="header">
+	<a href="/"><img src="/images/logo.png"></a>欢迎使用Spring Boot入门样例
+	<div class="welcome" th:if="${user != null}"><a href="/post/add">发布博客</a> 欢迎，<span th:text="${user.username}"></span></div>
+	<div class="welcome" th:if="${user == null}"> <a href="/login">登录</a> </div>
+</div>
+<div class="content">
+
+	<h1 class="post-name"><span th:text="${post.name}"></span></h1>
+
+	<div class="post-content"><span th:text="${post.content}"></span></div>
+
+</div>
+</body>
+</html>

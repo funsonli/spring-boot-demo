@@ -1,0 +1,16 @@
+.header {
+    margin: 15px auto;
+    width: 1280px;
+}
+.header img {
+    width: 40px;
+    height: 40px;
+}
+.welcome {
+    float: right;
+}
+.content {
+    clear: both;
+    margin: 10px auto;
+    width: 1280px;
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div class="header">
+	<a href="/"><img src="/images/logo.png"></a>欢迎使用Spring Boot入门样例
+</div>
+<div class="content">
+	<form action="/post/add" method="post">
+		标题：<input type="text" name="name" placeholder="标题"/><br>
+		内容：<textarea name="content"></textarea><br>
+		<input type="submit" value="提交">
+	</form>
+</div>
+</body>
+</html>
