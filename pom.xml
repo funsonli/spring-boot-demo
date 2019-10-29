@@ -49,6 +49,10 @@
         <module>spring-boot-demo-305-redis-sentinel</module>
         <module>spring-boot-demo-310-mongodb</module>
 
+        <!-- 5xx 主要是和第三方交互的常用功能 -->
+        <module>spring-boot-demo-520-upload-qiniu</module>
+        <module>spring-boot-demo-521-upload-aliyun-oss</module>
+
     </modules>
 
     <dependencies>

@@ -1,6 +1,6 @@
 # Spring Boot入门样例-520-upload-qiniu整合七牛云上传图片
 
-> 图片通过七牛云等云存储系统，可以让用户更快的。本demo演示如何演示如何使用@CachePut 和 @Cacheable缓存数据。
+> 图片通过七牛云等云存储系统，可以让用户更快的显示图片。本demo演示如何演示如何将图片上传到七牛云。
 
 ### 前言
 
@@ -60,7 +60,7 @@ qiniu:
 
 ### 代码解析
 
-QiniuUtil.java StudentDao继承MongoRepository<Student, String>
+QiniuUtil.java 
 ```
 @Slf4j
 @Component
@@ -193,6 +193,7 @@ public class CommonController {
 ### 参考
 - Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
 - Bootan源代码地址 https://github.com/funsonli/bootan
+- 七牛官方SDK Java https://developer.qiniu.com/kodo/sdk/1239/java#upload-config
 
 
 ### 附

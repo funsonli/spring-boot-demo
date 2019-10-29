@@ -1,0 +1,8 @@
+
+aliyun:
+  oss:
+    address: http://static.sxxx.com
+    end-point: oss-cn-shenzhen.aliyuncs.com
+    access-key: LTAxxxxxxxxxxxxxx
+    secret-key: z80tbxx
+    bucket: funsonli-mini
