@@ -1,0 +1,8 @@
+
+qiniu:
+  accessKey: 0u4ZXXXXXXXXXXXXXXXXXXX
+  secretKey: 3bqtpyXXXXXXXXXXXXXXXXXXXXXXX
+  bucket: jiajiayoupin
+  domain: img.jiajiayoupin.com
+  region: -1
+
