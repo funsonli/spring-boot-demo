@@ -87,8 +87,8 @@ management:
 
 ```
 
-![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-210-admin-01.png?raw=true)
-![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-210-admin-03.png?raw=true)
+![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-210-template-01.png?raw=true)
+![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-210-template-03.png?raw=true)
 
 ### 参考
 - Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
