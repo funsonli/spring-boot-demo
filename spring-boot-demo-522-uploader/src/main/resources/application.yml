@@ -1,0 +1,15 @@
+
+uploader:
+  type: 2
+  qiniu:
+    accessKey: 0u4ZFxeExxxx
+    secretKey: 3bqtpy8xxxx
+    bucket: jiajiayoupin
+    domain: http://img.xxx.com
+    region: -1
+  aliyun:
+    address: http://static.xxxx.com
+    end-point: oss-cn-shenzhen.aliyuncs.com
+    access-key: LTAIxxxx
+    secret-key: z80txxx
+    bucket: haixxxx
