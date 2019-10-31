@@ -1,4 +1,4 @@
-# Spring Boot入门样例-300-redis-sentinel整合Redis哨兵模式
+# Spring Boot入门样例-305-redis-sentinel整合Redis哨兵模式
 
 > Redis哨兵模式能保障Redis服务器高可用，当主节点宕机时对用户不产生影响。本demo演示如何设置和配置Redis Sentinel哨兵模式。
 
