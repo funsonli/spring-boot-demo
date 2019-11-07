@@ -30,6 +30,11 @@
 ![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-003-idea-05.png?raw=true)
 
 
+### 新项目无法正常启动
+
+1. 右键子目录的 pom.xml，选择Add as Maven Project
+2. 如果目录有问题，选择 File - Project Structure - Modules中设置路径
+2. 在右侧Maven中，双击 项目 - Lifecycle - clean 和 install重新下载相关依赖
 
 ### 参考
 - 源代码地址 https://github.com/funsonli/spring-boot-demo
