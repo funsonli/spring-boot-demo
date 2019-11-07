@@ -29,10 +29,13 @@
         <module>spring-boot-demo-063-template-enjoy</module>
         <module>spring-boot-demo-090-blog</module>
 
+<!--        <module>spring-boot-demo-100-exception</module>-->
         <module>spring-boot-demo-110-log</module>
         <module>spring-boot-demo-111-log-aop</module>
         <module>spring-boot-demo-120-ehcache-cache</module>
 <!--        <module>spring-boot-demo-130-websocket</module>-->
+        <module>spring-boot-demo-140-async</module>
+<!--        <module>spring-boot-demo-170-i18n</module>-->
 
         <!-- 2xx 主要是第三方整合功能 -->
         <module>spring-boot-demo-200-actuator</module>
