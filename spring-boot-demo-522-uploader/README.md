@@ -1,4 +1,4 @@
-# Spring Boot入门样例-521-uploader整合七牛云和阿里云OSS上传图片
+# Spring Boot入门样例-522-uploader整合七牛云和阿里云OSS上传图片
 
 > 如果项目使用多个云存储，我们可以在配置文件中配置多个。本demo演示使用工厂模式无缝切换。
 
