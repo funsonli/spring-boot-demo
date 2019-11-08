@@ -20,6 +20,7 @@ import java.util.concurrent.Future;
 @RequestMapping("/student")
 public class StudentController {
 
+    // 此处为字符串，也可以从数据表中读取出来
     private static final String jobName = "com.funsonli.springbootdemo161quartz.job.SampleJob";
     private static final String cronExpression = "0/3 * * * * ?";
     private static final String parameter = "param";
