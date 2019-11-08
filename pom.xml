@@ -18,6 +18,7 @@
         <java.version>1.8</java.version>
     </properties>
     <modules>
+        <!-- 0xx系列为入门功能 -->
         <module>spring-boot-demo-010-hello-world</module>
         <module>spring-boot-demo-020-properties</module>
         <module>spring-boot-demo-030-jdbc-template</module>
@@ -28,22 +29,39 @@
         <module>spring-boot-demo-062-template-freemarker</module>
         <module>spring-boot-demo-063-template-enjoy</module>
         <module>spring-boot-demo-090-blog</module>
+<!--        <module>spring-boot-demo-091-war</module>-->
 
-<!--        <module>spring-boot-demo-100-exception</module>-->
+        <!-- 1xx系列为Spring Boot常用功能 -->
+<!--        <module>spring-boot-demo-100-session</module>-->
+<!--        <module>spring-boot-demo-101-security</module>-->
+<!--        <module>spring-boot-demo-102-shiro</module>-->
+<!--        <module>spring-boot-demo-103-oauth</module>-->
         <module>spring-boot-demo-110-log</module>
         <module>spring-boot-demo-111-log-aop</module>
         <module>spring-boot-demo-120-ehcache-cache</module>
-<!--        <module>spring-boot-demo-130-websocket</module>-->
+<!--        <module>spring-boot-demo-130-exception</module>-->
         <module>spring-boot-demo-140-async</module>
+<!--        <module>spring-boot-demo-150-page</module>-->
+<!--        <module>spring-boot-demo-151-jpa-multi-source</module>-->
+<!--        <module>spring-boot-demo-152-mybatis-multi-source</module>-->
+<!--        <module>spring-boot-demo-153-jdbc-sharding</module>-->
+<!--        <module>spring-boot-demo-154-mycat</module>-->
+<!--        <module>spring-boot-demo-160-task</module>-->
+<!--        <module>spring-boot-demo-161-quartz</module>-->
+<!--        <module>spring-boot-demo-162-xxl-job</module>-->
 <!--        <module>spring-boot-demo-170-i18n</module>-->
+<!--        <module>spring-boot-demo-180-websocket</module>-->
+<!--        <module>spring-boot-demo-190-sso</module>-->
 
-        <!-- 2xx 主要是第三方整合功能 -->
+        <!-- 2xx 主要是第三方整合常用功能 -->
         <module>spring-boot-demo-200-actuator</module>
         <module>spring-boot-demo-210-admin</module>
         <module>spring-boot-demo-220-swagger</module>
         <module>spring-boot-demo-221-swagger-bootstrap-ui</module>
         <module>spring-boot-demo-230-guava-cache</module>
         <module>spring-boot-demo-231-guava-rate-limit</module>
+<!--        <module>spring-boot-demo-240-social</module>-->
+<!--        <module>spring-boot-demo-250-zookeeper</module>-->
         <module>spring-boot-demo-280-docker</module>
 
         <!-- 3xx 主要是Nosql-->
@@ -51,11 +69,42 @@
         <module>spring-boot-demo-301-redis-cache</module>
         <module>spring-boot-demo-305-redis-sentinel</module>
         <module>spring-boot-demo-310-mongodb</module>
+<!--        <module>spring-boot-demo-320-elasticsearch</module>-->
+<!--        <module>spring-boot-demo-330-memcache</module>-->
+<!--        <module>spring-boot-demo-360-neo4j</module>-->
+<!--        <module>spring-boot-demo-380-hadoop</module>-->
+<!--        <module>spring-boot-demo-390-ldap</module>-->
 
-        <!-- 5xx 主要是和第三方交互的常用功能 -->
+        <!-- 4xx 主要是消息队列-->
+<!--        <module>spring-boot-demo-400-rabbitmq</module>-->
+<!--        <module>spring-boot-demo-401-rabbitmq-consumer</module>-->
+<!--        <module>spring-boot-demo-410-kafka</module>-->
+<!--        <module>spring-boot-demo-420-activemq</module>-->
+<!--        <module>spring-boot-demo-430-rocketmq</module>-->
+
+        <!-- 5xx 主要是常用功能 -->
+<!--        <module>spring-boot-demo-510-email</module>-->
         <module>spring-boot-demo-520-upload-qiniu</module>
         <module>spring-boot-demo-521-upload-aliyun-oss</module>
         <module>spring-boot-demo-522-uploader</module>
+<!--        <module>spring-boot-demo-530-code-generator</module>-->
+<!--        <module>spring-boot-demo-531-velocity</module>-->
+
+        <!-- 6xx 主要是第三方复杂功能 -->
+<!--        <module>spring-boot-demo-800-activiti</module>-->
+
+        <!-- 9xx 主要是分布式功能 -->
+<!--        <module>spring-boot-demo-900-dubbo</module>-->
+<!--        <module>spring-boot-demo-930-jta-atomikos</module>-->
+<!--        <module>spring-boot-demo-900-spring-cloud</module>-->
+
+        <!-- pxx 主要是和bootan后台平台相关功能 -->
+<!--        <module>spring-boot-demo-b00-second-kill</module>-->
+
+        <!-- pxx 主要是一些复杂实现功能 -->
+<!--        <module>spring-boot-demo-p01-second-kill</module>-->
+<!--        <module>spring-boot-demo-p01-second-kill-mq-frontend</module>-->
+<!--        <module>spring-boot-demo-p01-second-kill-mq-backend</module>-->
 
     </modules>
 
