@@ -1,4 +1,4 @@
-# Spring Boot入门样例-140-task定时任务
+# Spring Boot入门样例-160-task定时任务
 
 > 比如游戏一般在凌晨3点给用户结算当天的签到，再签到就算第二天的任务，需要使用定时任务。本demo演示如何在程序中实现定时任务。
 
@@ -73,7 +73,7 @@ public class TaskConfig implements SchedulingConfigurer {
 
 ```
 
-StudentService.java  定义3种定时任务方法
+SampleTask.java  定义3种定时任务方法
 ```
 @Slf4j
 @Component
