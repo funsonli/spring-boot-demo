@@ -10,6 +10,44 @@
 - [Spring Boot入门样例-003-idea 安装配置和插件](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-003-idea.md)
 - [Spring Boot入门样例-005-如何运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
+### 准备
+
+下载地址：https://www.elastic.co/downloads/past-releases
+
+当前现在6.2.2版本 https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.tar.gz
+
+启动：解压后在elasticsearch/bin目录中双击 
+
+``` 
+[2019-11-12T11:56:57,788][INFO ][o.e.t.TransportService   ] [BjlbBNk] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2019-11-12T11:57:00,890][INFO ][o.e.c.s.MasterService    ] [BjlbBNk] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {BjlbBNk}{BjlbBNksQnCZ0bdMMqYdYw}{JwncO5VgTaOMzMhEY1GKSA}{127.0.0.1}{127.0.0.1:9300}
+[2019-11-12T11:57:00,895][INFO ][o.e.c.s.ClusterApplierService] [BjlbBNk] new_master {BjlbBNk}{BjlbBNksQnCZ0bdMMqYdYw}{JwncO5VgTaOMzMhEY1GKSA}{127.0.0.1}{127.0.0.1:9300}, reason: apply cluster state (from master [master {BjlbBNk}{BjlbBNksQnCZ0bdMMqYdYw}{JwncO5VgTaOMzMhEY1GKSA}{127.0.0.1}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2019-11-12T11:57:01,233][INFO ][o.e.g.GatewayService     ] [BjlbBNk] recovered [1] indices into cluster_state
+[2019-11-12T11:57:01,506][INFO ][o.e.c.r.a.AllocationService] [BjlbBNk] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[name][0]] ...]).
+[2019-11-12T11:57:01,590][INFO ][o.e.h.n.Netty4HttpServerTransport] [BjlbBNk] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2019-11-12T11:57:01,590][INFO ][o.e.n.Node               ] [BjlbBNk] started
+```
+
+可以访问 http://127.0.0.1:9200/ 获取elasticsearch相关信息
+```
+{
+  "name" : "BjlbBNk",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "wkDP6LrTRnCTsUzBBabghA",
+  "version" : {
+    "number" : "6.2.2",
+    "build_hash" : "10b1edd",
+    "build_date" : "2018-02-16T19:01:30.685723Z",
+    "build_snapshot" : false,
+    "lucene_version" : "7.2.1",
+    "minimum_wire_compatibility_version" : "5.6.0",
+    "minimum_index_compatibility_version" : "5.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
+
 ### pox.xml
 必要的依赖如下，具体参见该项目的pox.xml
 ```
