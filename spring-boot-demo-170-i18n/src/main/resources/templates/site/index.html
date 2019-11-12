@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div class="header">
+	<a href="/"><img src="/images/logo.png"></a><span th:text="#{spring_boot}">
+</div>
+<div class="content">
+	<select id="locale">
+		<option value="zh_CN">中文简体</option>
+		<option value="en_US">English</option>
+	</select>
+
+	<span th:text="#{welcome}"></span><span th:text="${user.name}"></span>
+</div>
+<script th:inline="javascript">
+	//选中语言
+	$("#locale").find('option[value="' + LANG_COUNTRY + '"]').attr('selected', true);
+	//切换语言
+	$("#locale").change(function () {
+		$.get(ROOT + '/?lang=' + $("#locale").val(), function () {
+			location.reload();
+		});
+	});
+</script>
+</body>
+</html>
+

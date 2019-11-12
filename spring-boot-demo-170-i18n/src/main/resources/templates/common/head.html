@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>欢迎使用Spring Boot入门样例之thymeleaf</title>
+	<link type="text/css" rel="stylesheet" href="/css/style.css" />
+	<script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+	<script th:src="@{/webjars/jquery-i18n-properties/jquery.i18n.properties.min.js}"></script>
+	<script th:inline="javascript">
+		//获取应用路径
+		var ROOT = [[${#servletContext.contextPath}]];
+
+		//获取默认语言
+		var LANG_COUNTRY = [[${#locale.language+'_'+#locale.country}]];
+	</script>
+</head>
+</html>

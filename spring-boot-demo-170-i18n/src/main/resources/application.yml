@@ -1,0 +1,11 @@
+spring:
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+    cache-duration: 3600
+  thymeleaf:
+    cache: false
+    servlet:
+      content-type: text/html
+    mode: HTML
+    encoding: UTF-8
