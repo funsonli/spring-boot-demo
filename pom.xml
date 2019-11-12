@@ -29,13 +29,14 @@
         <module>spring-boot-demo-062-template-freemarker</module>
         <module>spring-boot-demo-063-template-enjoy</module>
         <module>spring-boot-demo-090-blog</module>
-<!--        <module>spring-boot-demo-091-war</module>-->
+<!--        <module>spring-boot-demo-091-blog-mybatis</module>-->
+<!--        <module>spring-boot-demo-091-blog-mybatis-plus</module>-->
 
         <!-- 1xx系列为Spring Boot常用功能 -->
-<!--        <module>spring-boot-demo-100-session</module>-->
-<!--        <module>spring-boot-demo-101-security</module>-->
-<!--        <module>spring-boot-demo-102-shiro</module>-->
-<!--        <module>spring-boot-demo-103-oauth</module>-->
+        <module>spring-boot-demo-100-session</module>
+<!--        <module>spring-boot-demo-103-security</module>-->
+<!--        <module>spring-boot-demo-106-shiro</module>-->
+<!--        <module>spring-boot-demo-109-oauth</module>-->
         <module>spring-boot-demo-110-log</module>
         <module>spring-boot-demo-111-log-aop</module>
         <module>spring-boot-demo-120-ehcache-cache</module>
@@ -72,7 +73,7 @@
         <module>spring-boot-demo-320-elasticsearch</module>
         <module>spring-boot-demo-330-memcache</module>
 <!--        <module>spring-boot-demo-360-neo4j</module>-->
-<!--        <module>spring-boot-demo-380-hadoop</module>-->
+        <module>spring-boot-demo-380-hadoop</module>
 <!--        <module>spring-boot-demo-390-ldap</module>-->
 
         <!-- 4xx 主要是消息队列-->
@@ -91,7 +92,7 @@
 <!--        <module>spring-boot-demo-531-velocity</module>-->
 
         <!-- 8xx 主要是第三方复杂功能 -->
-<!--        <module>spring-boot-demo-800-activiti</module>-->
+        <module>spring-boot-demo-800-activiti</module>
 
         <!-- 9xx 主要是分布式功能 -->
 <!--        <module>spring-boot-demo-900-dubbo</module>-->
