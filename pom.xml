@@ -69,8 +69,8 @@
         <module>spring-boot-demo-301-redis-cache</module>
         <module>spring-boot-demo-305-redis-sentinel</module>
         <module>spring-boot-demo-310-mongodb</module>
-<!--        <module>spring-boot-demo-320-elasticsearch</module>-->
-<!--        <module>spring-boot-demo-330-memcache</module>-->
+        <module>spring-boot-demo-320-elasticsearch</module>
+        <module>spring-boot-demo-330-memcache</module>
 <!--        <module>spring-boot-demo-360-neo4j</module>-->
 <!--        <module>spring-boot-demo-380-hadoop</module>-->
 <!--        <module>spring-boot-demo-390-ldap</module>-->
