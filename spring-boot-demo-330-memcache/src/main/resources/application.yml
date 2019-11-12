@@ -1,0 +1,4 @@
+memcached:
+  servers: 127.0.0.1:11211
+  poolSize: 10
+  opTimeout: 6000
