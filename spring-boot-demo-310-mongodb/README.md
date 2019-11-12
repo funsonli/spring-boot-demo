@@ -1,6 +1,6 @@
 # Spring Boot入门样例-310-mongodb整合mongodb数据库
 
-> Mongodb是一款高性能内存Key Value键值对的Nosql数据库。本demo演示如何演示如何使用@CachePut 和 @Cacheable缓存数据。
+> Mongodb是一款高性能内存Nosql数据库，支持对键值的查询。本demo演示如何演示如何mongodb缓存数据并读取。
 
 ### 前言
 
