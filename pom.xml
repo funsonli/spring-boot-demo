@@ -90,7 +90,7 @@
 <!--        <module>spring-boot-demo-530-code-generator</module>-->
 <!--        <module>spring-boot-demo-531-velocity</module>-->
 
-        <!-- 6xx 主要是第三方复杂功能 -->
+        <!-- 8xx 主要是第三方复杂功能 -->
 <!--        <module>spring-boot-demo-800-activiti</module>-->
 
         <!-- 9xx 主要是分布式功能 -->
