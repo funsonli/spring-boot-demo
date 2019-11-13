@@ -40,6 +40,14 @@
 
 ```
 
+### 如何运行
+
+1. 准备Java和maven环境 [Java和Maven安装配置](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-001-java.md)
+2. 配置IDEA和安装相关插件 [idea 安装配置和插件](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-003-idea.md)
+3. 在IDEA中运行对应的样例 [如何运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
+
+> 如果在idea中运行慢，建议将mvn的源设置为国内的，参考[配置mirror为国内源](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-001-java.md#mirror)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
