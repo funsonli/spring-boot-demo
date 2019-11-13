@@ -10,7 +10,7 @@
 - [Spring Boot入门样例-003-idea 安装配置和插件](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-003-idea.md)
 - [Spring Boot入门样例-005-如何运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
-> memcached 安装请参考 https://www.runoob.com/memcached/window-install-memcached.html
+> hadoop 安装请参考 http://hadoop.apache.org/docs/r1.0.4/cn/quickstart.html
 
 ### pox.xml
 必要的依赖如下，具体参见该项目的pox.xml
