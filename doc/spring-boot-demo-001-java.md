@@ -73,7 +73,7 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 
 可以在 https://mvnrepository.com/ 查找相关依赖资源
 
-maven依赖包默认从http://repo1.maven.org/maven2/中下载，由于在海外速度比较慢，可以修改./conf/settings.xml文件中进行如下配置使用阿里云镜像库
+<a name="mirror"></a>maven依赖包默认从http://repo1.maven.org/maven2/中下载，由于在海外速度比较慢，可以修改./conf/settings.xml文件中进行如下配置使用阿里云镜像库
 
 ``` 
 <mirrors>
