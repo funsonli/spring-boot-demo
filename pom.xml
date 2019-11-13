@@ -84,7 +84,7 @@
 <!--        <module>spring-boot-demo-430-rocketmq</module>-->
 
         <!-- 5xx 主要是常用功能 -->
-<!--        <module>spring-boot-demo-510-email</module>-->
+        <module>spring-boot-demo-510-email</module>
         <module>spring-boot-demo-520-upload-qiniu</module>
         <module>spring-boot-demo-521-upload-aliyun-oss</module>
         <module>spring-boot-demo-522-uploader</module>
@@ -93,6 +93,7 @@
 
         <!-- 8xx 主要是第三方复杂功能 -->
         <module>spring-boot-demo-800-activiti</module>
+        <module>spring-boot-demo-801-activiti-diagram</module>
 
         <!-- 9xx 主要是分布式功能 -->
 <!--        <module>spring-boot-demo-900-dubbo</module>-->

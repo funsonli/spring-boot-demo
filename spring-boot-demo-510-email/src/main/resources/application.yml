@@ -1,0 +1,22 @@
+
+spring:
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: funsonli@163.com
+    password: ENC(wqg+4BsSW9L/Gb4w62keoiEpEZllpcJG)
+    protocol: smtp
+    test-connection: true
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.ssl.enable: true
+      mail.display.sendmail: spring-boot-demo
+
+jasypt:
+  encryptor:
+    password: funson
+server:
+  port: 8081
