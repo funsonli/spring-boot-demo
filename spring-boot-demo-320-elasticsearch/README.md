@@ -177,8 +177,8 @@ NoNodeAvailableException: None of the configured nodes are available: [{#transpo
 
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 - Elasticsearch官方文档 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/getting-started.html
 - Spring boot Elastic文档 https://docs.spring.io/spring-data/elasticsearch/docs/3.2.1.RELEASE/reference/html/#reference
 

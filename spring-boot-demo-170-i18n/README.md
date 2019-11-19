@@ -249,8 +249,8 @@ login.html 在script中通过在参数后加 ?lang=xxx 来切换语音
 ![图片](https://raw.githubusercontent.com/funsonli/spring-boot-demo/master/doc/images/spring-boot-demo-170-05.png?raw=true)
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 
 
 ### 附

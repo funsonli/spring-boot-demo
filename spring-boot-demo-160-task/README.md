@@ -133,8 +133,8 @@ xxx
 
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 
 
 ### 附

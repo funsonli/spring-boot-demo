@@ -759,8 +759,8 @@ public class SpringBootDemo800ActivitiApplicationTests {
 ```
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 - Activiti官网 https://www.activiti.org/
 - Activiti表结构 https://blog.csdn.net/hj7jay/article/details/51302829
 

@@ -326,8 +326,8 @@ public class CommonController {
 
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 - 七牛官方SDK Java https://developer.qiniu.com/kodo/sdk/1239/java#upload-config
 - 阿里云官方SDK Java https://help.aliyun.com/document_detail/84781.html
 
