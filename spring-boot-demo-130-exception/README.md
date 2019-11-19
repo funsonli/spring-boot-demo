@@ -34,7 +34,7 @@
 
 ### 配置文件
 
-resources/application.yml配置内容 ehcache.config指定ehcache的
+resources/application.yml配置内容
 ```
 无
 ```
