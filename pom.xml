@@ -40,7 +40,7 @@
         <module>spring-boot-demo-110-log</module>
         <module>spring-boot-demo-111-log-aop</module>
         <module>spring-boot-demo-120-ehcache-cache</module>
-<!--        <module>spring-boot-demo-130-exception</module>-->
+        <module>spring-boot-demo-130-exception</module>
         <module>spring-boot-demo-140-async</module>
 <!--        <module>spring-boot-demo-150-page</module>-->
 <!--        <module>spring-boot-demo-151-jpa-multi-source</module>-->
