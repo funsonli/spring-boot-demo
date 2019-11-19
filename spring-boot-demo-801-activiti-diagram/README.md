@@ -1,6 +1,6 @@
-# Spring Boot入门样例-801-activiti-diagram整合activiti在线设计
+# Spring Boot入门样例-801-activiti-diagram整合activiti工作流在线设计工作流程
 
-> activiti工作流可以通过网页设计，本demo演示整合activiti实现工作流在线设计。
+> activiti工作流可以通过网页设计，本demo演示整合activiti实现工作流在线设计工作流程。
 
 ### 前言
 
@@ -177,8 +177,8 @@ public class SpringBootDemo801ActivitiDiagramApplication {
 设计完成后点击左上方的保存，官方的代码ModelEditorJsonRestResource.java会保存但是还是会报错，可以参考[bootan的actitivi工作流](https://github.com/funsonli/bootan/blob/master/src/main/java/com/funsonli/bootan/module/activiti/controller/modeler/ModelSaveRestResource.java)
 
 ### 参考
-- Spring Boot入门样例源代码地址 https://github.com/funsonli/spring-boot-demo
-- Bootan源代码地址 https://github.com/funsonli/bootan
+- Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
+- Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
 - Activiti官网 https://www.activiti.org/
 - Activiti表结构 https://blog.csdn.net/hj7jay/article/details/51302829
 
