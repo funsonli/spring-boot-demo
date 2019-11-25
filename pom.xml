@@ -45,8 +45,8 @@
 <!--        <module>spring-boot-demo-150-page</module>-->
 <!--        <module>spring-boot-demo-151-jpa-multi-source</module>-->
 <!--        <module>spring-boot-demo-152-mybatis-multi-source</module>-->
-<!--        <module>spring-boot-demo-153-jdbc-sharding</module>-->
-<!--        <module>spring-boot-demo-154-mycat</module>-->
+<!--        <module>spring-boot-demo-157-jdbc-sharding</module>-->
+<!--        <module>spring-boot-demo-158-mycat</module>-->
         <module>spring-boot-demo-160-task</module>
         <module>spring-boot-demo-161-quartz</module>
 <!--        <module>spring-boot-demo-162-xxl-job</module>-->
