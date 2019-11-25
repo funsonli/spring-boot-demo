@@ -1,4 +1,4 @@
-# Spring Boot入门样例-151-JPA整合Jpa多数据源Multi Source
+# Spring Boot入门样例-152-mybatis-multi-source整合Jpa多数据源Multi Source
 
 > 当系统拆分成多个，如用户表和订单表在不同的数据库。本demo演示如何使用mybatis整合多数据源Multi Source
 
