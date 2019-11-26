@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funsonli.springbootdemo154mybatisatomikos.mapper.order.OrderMapper">
+    <insert id="save">
+        INSERT INTO `tbl_order` (`id`,
+                                `student_id`,
+                                `sn`,
+                                `amount`)
+        VALUES (#{order.id},
+                #{order.studentId},
+                #{order.sn},
+                #{order.amount})
+    </insert>
+</mapper>

@@ -43,8 +43,10 @@
         <module>spring-boot-demo-130-exception</module>
         <module>spring-boot-demo-140-async</module>
 <!--        <module>spring-boot-demo-150-page</module>-->
-<!--        <module>spring-boot-demo-151-jpa-multi-source</module>-->
-<!--        <module>spring-boot-demo-152-mybatis-multi-source</module>-->
+        <module>spring-boot-demo-151-jpa-multi-source</module>
+        <module>spring-boot-demo-152-mybatis-multi-source</module>
+        <module>spring-boot-demo-153-jpa-atomikos</module>
+        <module>spring-boot-demo-154-mybatis-atomikos</module>
 <!--        <module>spring-boot-demo-157-jdbc-sharding</module>-->
 <!--        <module>spring-boot-demo-158-mycat</module>-->
         <module>spring-boot-demo-160-task</module>
