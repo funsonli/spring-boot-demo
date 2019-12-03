@@ -301,7 +301,7 @@ public class ProducerController {
 ### 参考
 - Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
 - Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
-
+- rabbitmq官方网站 [https://www.rabbitmq.com/](https://www.rabbitmq.com/)
 
 ### 附
 如果您喜欢本Spring Boot入门样例和样例代码，请[点赞Star](https://github.com/funsonli/spring-boot-demo)
