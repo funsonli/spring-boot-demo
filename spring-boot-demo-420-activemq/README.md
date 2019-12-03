@@ -10,7 +10,7 @@
 - [Spring Boot入门样例-003-idea 安装配置和插件](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-003-idea.md)
 - [Spring Boot入门样例-005-如何运行](https://github.com/funsonli/spring-boot-demo/blob/master/doc/spring-boot-demo-005-run.md)
 
-> rabbitmq 安装请参考 https://www.jianshu.com/p/3d43561bb3ee
+> Activemq 安装请参考 https://www.cnblogs.com/donsenChen/p/8656563.html
 
 ### pox.xml
 必要的依赖如下，具体参见该项目的pox.xml
@@ -123,7 +123,7 @@ http://localhost:8161/admin/index.jsp 帐号和密码都是admin admin
 ### 参考
 - Spring Boot入门样例源代码地址 [https://github.com/funsonli/spring-boot-demo](https://github.com/funsonli/spring-boot-demo)
 - Bootan源代码地址 [https://github.com/funsonli/bootan](https://github.com/funsonli/bootan)
-
+- Activemq官网 [http://activemq.apache.org/](http://activemq.apache.org/)
 
 ### 附
 如果您喜欢本Spring Boot入门样例和样例代码，请[点赞Star](https://github.com/funsonli/spring-boot-demo)
